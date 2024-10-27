@@ -4,17 +4,17 @@ let direction = 1;
 let interval;
 
 function animateLights() {
-    // Reset all lights to white with low opacity
+
     lights.forEach(light => {
         light.style.backgroundColor = 'white';
         light.style.opacity = 0.3;
     });
 
-    // Main red light
+
     lights[currentLight].style.backgroundColor = 'red';
     lights[currentLight].style.opacity = 1;
 
-    // Trailing lights on either side of the main red light
+
     if (currentLight - 1 >= 0) { // Left trail
         lights[currentLight - 1].style.backgroundColor = 'darkred';
         lights[currentLight - 1].style.opacity = 0.6;
@@ -40,5 +40,5 @@ function startAnimation() {
 function stopAnimation() {
     clearInterval(interval);
     interval = null;
-    // Do not reset lights here to retain the last animated state.
+
 }
