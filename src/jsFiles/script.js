@@ -16,7 +16,7 @@ function animateLights() {
 
 
     if (currentLight - 1 >= 0) { // Left trail
-        lights[currentLight - 1].style.backgroundColor = 'darkred';
+        lights[currentLight - 1].style.backgroundColor = 'lightred';
         lights[currentLight - 1].style.opacity = 0.6;
     }
     if (currentLight + 1 < lights.length) { // Right trail
